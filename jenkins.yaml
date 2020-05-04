@@ -1,0 +1,56 @@
+jenkins:
+  systemMessage: "Jenkins Configured using Code"
+
+  numExecuters: 1
+  mode: NORMAL
+  scmCheckoutRetryCount: 3
+  labelString: "master-label"
+
+  securityReal:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${adminpw:-passw0rd}
+
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Overall/Read:anonymous"
+  
+  crumbIssuer: "standard"
+    #enabled: true
+  
+  remoteSecurity:
+    enabled:true
+  
+unclassified:
+  location:
+    adminAdress: "jenkins@example.com"
+
+tool:
+  git:
+    installations:
+      - name: Default
+        host: "git"
+
+  jdk:
+    installations:
+      - name: "open-jdk8"
+        properties:
+          - installSource:
+              installers:
+                - jdkInstallers:
+                    acceptLicense: true
+                    id: "jdk-8u221-oth-JPR"
+
+  maven:
+    installations:
+      - name: "Maven 3"
+        properties:
+          - installSource:
+              installers:
+                - maven:
+                    id: "3.5.4"
+                    
+
