@@ -1,8 +1,8 @@
-configuration-as-code:1.34
+configuration-as-code:1.35
 jdk-tool:1.4
 adoptopenjdk:1.2
 job-dsl:1.76
-credentials:2.3.0
+credentials:2.3.5
 git:4.0.0
 ssh-slaves:1.31.0
 warnings:5.0.1
