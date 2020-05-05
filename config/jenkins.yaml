@@ -17,13 +17,22 @@ jenkins:
     globalMatrix:
       grantedPermissions:
         - "Overall/Read:anonymous"
+        - "Job/Read:anonymous"
+        - "View/Read:anonymous"
+        - "Overall/Administer:authenticated"
   
-  crumbIssuer: "standard"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
     #enabled: true
   
   remoteSecurity:
     enabled:true
-  
+security:
+  queueItemAuthenticator:
+    authenticators:
+      - global:
+          startegy: triggeringUsersAuthorizationStrategy  
 unclassified:
   location:
     adminAdress: "jenkins@example.com"
@@ -52,5 +61,3 @@ tool:
               installers:
                 - maven:
                     id: "3.5.4"
-                    
-
