@@ -29,6 +29,8 @@ jenkins:
   remoteSecurity:
     enabled:true
 security:
+  downloadSettings:
+    useBrowser: false
   queueItemAuthenticator:
     authenticators:
       - global:
