@@ -1,5 +1,5 @@
 ############ Version of docker compose competability with docker engine 
-version: '3.8'
+version: '3.3'
 
 services:
   jenkins: 
