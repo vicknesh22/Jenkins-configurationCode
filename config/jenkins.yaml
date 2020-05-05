@@ -6,7 +6,7 @@ jenkins:
   scmCheckoutRetryCount: 3
   labelString: "master-label"
 
-  securityReal:
+  securityRealm:
     local:
       allowsSignup: false
       users:
